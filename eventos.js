@@ -1,7 +1,18 @@
-let divButton= document.getElementById("divButton");
+let button= document.getElementById("button");
 
-function saludo(){
+function saludoButton(event){
+    alert("Hola!");
+    event.stopPropagation();
+}
+
+button.addEventListener('click', saludoButton);
+
+//--------------------------------------------------
+
+let div= document.getElementById("div");
+
+function saludoDiv(){
     alert("Hola! Soy el div");
 }
 
-divButton.addEventListener('click', saludo);
+div.addEventListener('click', saludoDiv);
